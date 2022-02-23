@@ -1,7 +1,5 @@
 '''This is project on Ceaser Cipher. A simple data encryption technique'''
 
-from curses.ascii import isupper
-
 
 def encrypt(str, shift):
     print(f'The encryption of "{str}" is:')
