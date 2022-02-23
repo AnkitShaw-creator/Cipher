@@ -22,8 +22,20 @@ def encrypt(str, shift):
 
 
 def decrypt(str, shift):
-    #to be implemented
-    pass
+    print(f'The decryption of "{str}" is:')
+    S = ""
+    for i in str:
+        if i.isupper():
+            index = ord(i) - shift
+            if index < 65:
+                index = 90 - (65 - index) + 1
+            S += chr(index)
+        if i.islower():
+            index = ord(i) - shift
+            if index < 97:
+                index = 122 - (97 - index) + 1
+            S += chr(index)
+    print(S)
 
 
 if __name__ == "__main__":
